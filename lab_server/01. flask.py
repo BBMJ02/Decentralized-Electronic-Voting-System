@@ -8,6 +8,6 @@ def f1():
 
 @app.route('/a')
 def f2():
-    return
+    return 0
 
 app.run()
