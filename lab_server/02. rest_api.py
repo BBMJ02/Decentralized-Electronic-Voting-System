@@ -8,6 +8,7 @@ def f1():
 @app.route('/api2', methods=['POST'])
 def f2():
     data = request.get_json()
+    print(data)
     return jsonify(data)
 
 
