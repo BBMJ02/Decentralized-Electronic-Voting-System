@@ -4,12 +4,12 @@ import json
 while True:
     print('1. 블록체인 조회\n2. 투표 생성\n3. 투표\n4. 종료')
 
-    menu = input('=>')
+    menu = input('=> ')
 
     if menu == '1':
         res = requests.get('http://127.0.0.1:5000/list')
         print(res.text)
-        
+
     elif menu == '2':
         headers = {'Content-Type': 'application/json'}
 
@@ -20,7 +20,7 @@ while True:
 
         data = {
             'question': question,
-            'options': ['option1', 'option2', 'option3']
+            'options': [option1, option2, option3]
         }
 
         res = requests.post(
@@ -33,8 +33,8 @@ while True:
     elif menu == '3':
         headers = {'Content-Type':'application/json'}
 
-        id = input('투표 ID')
-        vote = input('투표 항목')
+        id = input('투표 ID: ')
+        vote = input('투표 항목: ')
 
         data = {'id': id, 'vote': vote}
 
