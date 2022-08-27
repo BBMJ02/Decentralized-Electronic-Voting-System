@@ -8,6 +8,9 @@ def f1():
 
 @app.route('/a')
 def f2():
-    return 0
+    return 'a'
 
+@app.route('/b')
+def f3():
+    return str(3+5)
 app.run()
