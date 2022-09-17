@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def f1():
+def d():
     return '시작 페이지'
 
 @app.route('/a')
