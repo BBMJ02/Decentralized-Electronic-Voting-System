@@ -1,6 +1,7 @@
 from flask import Flask , jsonify, request
 app = Flask(__name__)
 
+
 @app.route('/')
 def d():
     return '시작 페이지'
@@ -11,9 +12,8 @@ def f1():
 
 @app.route('/api2', methods=['POST'])
 def f2():
-    data = request.get_json()
+    data = request.get_json('3+5')
     print(data)
     return jsonify(data)
-
 
 app.run()
