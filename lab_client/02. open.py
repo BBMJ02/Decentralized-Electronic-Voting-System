@@ -8,5 +8,5 @@ data = {
     'options': ['A1','A2','A3']
 }
 
-res = requests.post('http://127.0.0.1:5000/open', data=json.dumps(data) , headers = headers)
+res = requests.post('http://127.0.0.1:5000/api2', data=json.dumps(data) , headers = headers)
 print(res.text)
