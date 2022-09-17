@@ -1,7 +1,16 @@
 from flask import Flask, jsonify,request
 app = Flask(__name__)
 
-chain = []
+chain = [
+    {
+        'type':'open',
+        'data':{
+            'id':'0',
+            'question':'Q1'
+            'options':['A1','A2','A3']
+        }
+    }
+]
 cnt = 0
 
 @app.route('/list', methods=['GET'])
